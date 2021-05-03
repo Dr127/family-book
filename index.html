@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>
+            Homework
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body onmouseover="setdate();">
+        <h1 id ="header" style="font-size: larger;">
+            Family Book
+        </h1>
+        <h4 id='date'></h4>
+        <img src="family-single-father-with-children-cartoon-vector-26668846.jpeg" style="width: 30%;" id ="family_img">
+        <h4 id = "family_name">Nabarun Chakraborty</h4>
+        <button onclick="update();">Next</button>
+        <script>
+            var images = 
+            ["cute-cartoon-illustration-mother-two-260nw-293497514.jpeg",
+            "Screen Shot 2021-05-03 at 3.52.58 PM.png",
+            "Screen Shot 2021-05-03 at 3.53.29 PM.png",
+            "family-single-father-with-children-cartoon-vector-26668846.jpeg"
+            ];
+            var names = [
+                "Debjani Roy",
+                "Driitan Chakraborty",
+                "Dhruv Chakraborty",
+                "Nabarun Chakraborty"
+            ]
+            var i = 0;
+
+            function update()
+            {
+                i++;
+                var numbers_of_family_member_in_array = 3
+                if(i > numbers_of_family_member_in_array)
+                {
+                    i = 0;
+                }
+                var updatedImage = images[i]
+                var updatedName = names[i]
+                document.getElementById("family_img").src = updatedImage;
+                document.getElementById("family_name").innerHTML = updatedName;
+
+            }
+            function setdate() {
+  document.getElementById('date').innerHTML = new Date().toDateString();
+}
+
+        </script>
+    </body>
+</html>
